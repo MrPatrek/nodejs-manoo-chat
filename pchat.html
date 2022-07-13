@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Socket.io -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- The client itself -->
+	<script src="/client.js"></script>
+
+	<title>Manoo - Personal Chat</title>
+	<link rel="icon" href="images/logo/manoo.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="pchat.html" class="active">Personal Chat</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</nav>
+
+
+
+
+
+
+
+	<div class="chat middlechat">
+		<!--	Chat window	-->
+
+
+		<header>
+			<center>
+				<h2>Personal <font color="Chocolate"><b>Manoo</b></font> chat!</h2>
+			</center>
+		</header>
+
+		<ul class="block1" id="block1">
+
+			<form id="usernameForm">
+				<label for="name" id="nameLabel">Name</label>
+				<input type="text" name="username" id="usernameField" placeholder="Enter your name"
+					class="form-control">
+				<br>
+
+				<button type="submit" class="btn btn-primary mybutton-bottom-right">Join the chat!</button>
+			</form>
+
+		</ul>
+
+		<div class="block2" id="block2">
+
+			<div id="user2"><br>
+
+				<button type="button" class="btn btn-danger mybutton-top-right" onclick="location.href='/';">Leave the
+					chat</button>
+
+				<h3>Chat window</h3>
+
+				<div id="all_messages"></div>
+
+
+				<div class="text-enter">
+					<!--	This is where we enter the message	-->
+
+					<form id="messageForm">
+						<div class="form-group">
+							<input class="form-control" type="text" name="some_message" id="messageField"
+								placeholder="Enter your message">
+						</div>
+
+						<!--	Button to send the message	-->
+						<button type="submit" class="btn btn-primary mybutton-bottom-right">Send your message</button>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	<br>
+
+
+
+
+
+
+
+
+
+
+
+	<footer>
+		<p><a href="sitemap.html">Site Map</a><br>
+			Copyright &copy; 2020 <font color="Chocolate"><b>Manoo Inc.</b></font> All rights reserved.
+		</p>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+
+* {
+	box-sizing: border-box;	/*Width and height apply to all parts of the element: content, padding and borders
+		(Include padding and border in the element's total width and height)*/
+}
+
+/*	NAVIGATION	*/
+
+nav {	/*navigation block*/
+	width: 100%;  /*Our navbar will take the whole width of the page*/
+	text-align: center; /*Elements of our navigation will be centered*/
+}
+
+nav ul {	/*list whici is used to store links of navbar*/
+	list-style-type: none;  /*We remove the bullets from our links*/
+	margin: 0;  /*We do not want to have space outside the border*/
+	padding: 0; /*We do not want to have space between the content and the border*/
+	background-color: Gainsboro;  /*The background color of our nav*/
+}
+
+nav li {	/*each link*/
+	display: inline-block;  /*By default, <li> elements are block elements. Here, we remove the line breaks
+		before and after each list item, to display them on one line*/  /*Usually it would be just inline,
+		but I want to be nav elements centered and to refer to them as to blocks, so here we have inline-block*/
+	float: none;  /*Usually it would be set to left, but we want out elements to be centered, so here we have none,
+		because we have already done that in nav*/
+}
+
+nav li a {	/*each text of the each link*/
+	display: block; /*We want to make the whole link area clickable (not only the text) and we also want to
+		specify padding (and height, width, margins, etc), so we display them as block elements*/
+	color: DarkSlateGray;  /*The color of text of the link*/
+	padding: 15px 45px; /*We set padding as block elemtsnt take up the full width avaliable, and we do not
+		want them to float next to each other*/ /*First "parameter is height", while second one is "width" of the block element*/
+	text-decoration: none;  /*I do not want to have my link underlined, so I remove it with this*/
+}
+
+nav li a:hover:not(.active) { /*hover effect over nav element, but not affecting the .active class (active tab)*/
+	background-color: Gray; /*background color changes to gray*/
+	color: White; /*text color becomes white*/
+	text-decoration: none;  /*We repeat the same command as in li a, otherwise when we would hover over li element,
+		the underline would appear again*/
+}
+
+nav li a.active { /*our active tab*/
+	background-color: Chocolate;  /*background color is Olive*/
+	color: White; /*text color is white*/
+	text-decoration: none;  /*We repeat the same command as in li a:hover:not(.active), but this time for .active class
+		otherwise when we would hover over li element, the underline would appear again*/
+}
+
+/*	BODY	*/
+
+header {	/*header block*/
+	margin: 25px;	/*I want some space to be outside the header borders*/
+}
+
+footer {	/*footer block*/
+	background-color: Gainsboro;	/*footer bg color*/
+	text-align: center;	/*we center the text here*/
+}
+
+.middle {	/*I want .middle class to be exactly on the middle of the page, so I set both left- and right-magrins to the 30%,
+		so the .middle class will take 60% of the page in the middle. And I want some space between top and bottom borders
+		of the .middle class*/
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.middlechat {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.sitemap {	/*The same as before, but modified and for the site map*/
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+img {
+	width: 100%;	/*Make all the images whe whole possible width*/
+}
+
+.text-center {	/*simple class to simply center text*/
+	text-align: center;	/*Text in this class will be centered*/
+}
+
+.success {	/*Information after registration*/
+	background-color: Gainsboro;	/*bg color of data received block of information*/
+	padding: 20px;	/*Space between the content and the border of .success class*/
+	border-radius: 50px;	/*Rounded corners of 50px*/
+}
+
+/*Personal Chat tab*/
+
+.chat {	/*The whole chat window, consisting of .block1 and .block2 blocks*/
+		/*it will take the whole page width*/
+}
+
+.chat:after {	/*I want footer to be on the bottom after everything else and dont want it to jump over other things, so I use this*/
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.block1 {	/*The window with Manoo users*/
+	float: left;	/*It will be in the most left*/
+	width: 100%;	/*It will take 38% of the page width, while .block2 will take 58% of page width*/
+	background-color: Gainsboro;	/*bg color of this*/
+	border-radius: 25px;	/*rounded corners of 25px*/
+	padding: 20px; /* space between the content and the border */
+}
+
+.block2 {	/*The chat window*/
+	float: left;	/*It will be in the most left after .block1 class*/
+	width: 100%;	/*It will take 58% of the page width, while .block1 will take 38% of page width*/
+	background-color: Gainsboro;	/*bg color of this*/
+	border-radius: 15px;	/*rounded corners of 15px*/
+	margin-left: 1%;	/*Space outside this class on the left side*/
+	margin-right: 1%;	/*Space outside this class on the right side*/
+	margin-bottom: 10px;	/*Space outside this class on the bottom*/
+}
+
+.full-list {	/*The class for li lists only!*/
+	width: 100%;	/*The width of list will take the whole possible width*/
+}
+
+.full-list a {
+	height: 100px;	/*The height of each link will be 100px;*/
+}
+
+.full-list a p {	/*The text of each link*/
+	float: left;	/*It will be on the most left side*/
+	font-size: 30px;	/*The font size of link text*/
+}
+
+li a img {
+	float: left;	/*It will be on the most left side*/
+	width: 80px;	/*The width will be 80px*/
+	border-radius: 50%;	/*Rounded image, so it is one entire circle*/
+	margin-right: 20px;	/*The space between the img and the paragraph*/
+}
+
+.nav-pills .nav-link.active {	/*ИМЕННО ТАК! ТУТ НЕТУ ПРОБЕЛА МЕЖДУ nav-link и active ! ! !*/
+	background-color: Chocolate;
+}
+
+.list-border {	/*The border between the elements of the list*/
+	width: 100%;
+	background-color: black;
+	height: 5px;
+}
+
+/*	The Chat itself	*/
+.message {	/*window (block) of a message from another person to us*/
+	/*background-color: AliceBlue;*/	/*bg color*/
+	padding: 20px;	/*space between the content and the border*/
+	margin: 20px;	/*space outside the border*/
+	border-radius: 10px;	/*rounded corners of 10px*/
+}
+
+.message:hover {	/*When we hover over the message, the background color changes*/
+	background-color: Chocolate;
+}
+
+.message:hover > p {	/*The same as before, but for the time*/
+	color: white;
+}
+
+.message:hover > .time-right, .message:hover > .time-left {	/*The same as before, but for the time*/
+	color: white;
+}
+
+.me {	/*window (block) of the message to us from another person*/
+	background-color: DarkSlateBlue;	/*bg color*/
+	color: white;	/*the color of the text*/
+}
+
+.me p {	/*change the float of the text when I am writing to someone*/
+	float: right;
+}
+
+.message:after {	/*After each message block I want to put new content BELOW THE MESSAGE BLOCK*/
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.message img {	/*When someone is writing to us, his pic is goint to be like:*/
+	float: left;	/*on the most left*/
+	width: 10%;	/*we want it to take only 10% of the message width*/
+	margin-right: 20px;	/*the space outside img on the right side*/
+	border-radius: 50%;	/*img looks like circle*/
+}
+
+.message img.right {	/*When we are writing to someone, our pic is going to be like:*/
+	float: right;	/*on the most right*/
+	margin-left: 20px;	/*the space outside img on the left side*/
+	margin-right: 0;	/*we reset the previuos margin-right: 20px to 0, as now we do not need it*/
+}
+
+.time-right {	/*The time when someone writes to us*/
+	float: right;	/*it will be on the right side of the page*/
+	color: DarkGray;	/*color of the text*/
+	width: 5%;	/*I want it to take 5% of the message width only*/
+	text-align: center;	/*center the time inside this class*/
+	margin-right: 20px;	/*additional 20px margin so it looks nicer on smaller screens*/
+}
+
+.time-left {	/*The time when we are wrinting to someone*/
+	float: left;	/*it will be on the left side of the page*/
+	color: LightGray;	/*color of the text*/
+	width: 5%;	/*I want it to take 5% of the message width only*/
+	text-align: center;	/*center the time inside this class*/
+}
+
+.block2 h3, .block2 p {	/*h3 and p tags inside .block2 class will have space outside the border the left side*/
+	margin-left: 20px;
+}
+
+.mybutton {	/*Modified Bootstrap button, but with margin*/
+	margin: 20px;
+}
+
+.mybutton-top-right {	/*Modified Bootstrap button, but with margin and being on the right side*/
+	margin-right: 20px;
+	float: right;
+}
+
+.mybutton-bottom-right {	/*Modified Bootstrap button, but with margin and being on the right side*/
+	margin-bottom: 20px;
+	float: right;
+}
+
+.text-enter {	/*This is what we enter and is supposed to be sent*/
+	margin: 20px;
+}
+
+.image_down {
+	width: 50%; /* Make the image twice smaller */
+}
+
+@media screen and (max-width: 850px) {	/*Responsive layout - makes the two columns/boxes stack on top of each other
+		instead of next to each other, on small screens*/  /*When we have mobile device*/
+
+	img {
+		width: 60%;	/*Set all images width to 60%*/
+	}
+
+	.image_down {
+		width: 25%; /* Make the image 4X smaller */
+	}
+
+	nav ul li {
+		display: inline; /*Make tabs be located one below another*/
+	}
+
+	.middle {	/*When we have small screen, we don't want both left- and right-margins to be such big as 20% each,
+		so we reduce them to 5% each, so it looks nicer on smaller screens*/
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.sitemap {	/*The same as before, but for .sitemap*/
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.block1, .block2 {
+		width: 90%;	/*Make the width of .block1 and .block2 19%, so they are one below each other*/
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.middlechat {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+
+}
