@@ -45,7 +45,7 @@ io.sockets.on('connection', function (socket) {
 	console.log("Users online:" + counter);
 
 
-	if (counter != 1 || counter != 2)
+	if (counter != 1 && counter != 2)
 		io.sockets.emit('append message', { message: counter + " users online! Server will NOT transmit messages until there are only two left.", username: "SERVER", className: 'danger' });
 
 
