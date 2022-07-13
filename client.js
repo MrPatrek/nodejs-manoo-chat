@@ -53,6 +53,9 @@ $(function () {
 
     $messageField.val(''); // clear the mesage field
 
+    // Auto-scroll down when submitting
+    $('html, body').scrollTop($('html, body').height());
+
   });
 
 
@@ -72,6 +75,9 @@ $(function () {
     // We send old chat to the server (so that the history is saved)
     socket.emit('send history', { history: $all_messages.html() });
 
+    // Auto-scroll down
+    $('html, body').scrollTop($('html, body').height());
+
   });
 
 
@@ -83,6 +89,9 @@ $(function () {
 
     $all_messages.empty(); // Remove the previous contents of the messages block
     $all_messages.append(data.history); // And append a new one from the server
+
+    // Auto-scroll down
+    $('html, body').scrollTop($('html, body').height());
 
   });
 
