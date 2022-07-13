@@ -4,8 +4,9 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
+var port = process.env.PORT || 8080;
 // Listenig to the port 8080
-server.listen(8080);
+server.listen(port);
 
 
 
