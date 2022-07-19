@@ -1,4 +1,4 @@
-# [Online chat on Node.js](https://nodejs-manoo-chat.herokuapp.com/)
+# [Online chat with Node.js](https://nodejs-manoo-chat.herokuapp.com/)
 
 A very simple online chat built on Node.js using Express and Socket.IO. Nothing special, it's like a pet project.
 
